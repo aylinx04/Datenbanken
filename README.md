@@ -1,6 +1,20 @@
+# Datenbanken
+
+## Übersicht
+
+In diesem Modul, wurde in Gruppenarbeit eine Datenbank für ein Reisesystem realisiert. Hierfür wurde mit einem ER-Modul, Entitäten, Beziehungstypen und Triggern. 
+
+## ER-Modell
+[ER_Modell_Reisesystem.pdf](https://github.com/user-attachments/files/28256491/ER_Modell_Reisesystem.pdf)
+
+In diesem ER-Modell sieht man in den Rechtecken die Entitäten, in den Kreisen die Attribute, wobei die dickgedruckten Attribute die Primärschlüssel sind und die Linien die Beziehungen zwischen den Entitäten darstellt.
 
 
-## Person
+## Das Relationale Modell
+
+Hier sieht man das Relationale Modell, welches zeigt wie die Tabellen in der Datenbank aussehen würde.
+
+### Person
 
 | Person-Id | Name       | Vorname | Email                                                 | TelefonNr | Adress-Id |
 | --------- | ---------- | ------- | ----------------------------------------------------- | --------- | --------- |
@@ -13,9 +27,8 @@
 | K007      | Choi       | Kai     | [choi.kai@gmail.com](mailto:choi.kai@gmail.com)       | 242526    | 6         |
 | M008      | Lomberg    | Mareike | [m.Lomberg@gmail.com](mailto:m.Lomberg@gmail.com)     | 282930    | 7         |
 
----
 
-## Adresse
+### Adresse
 
 | Adress-Id | Straße           | Hausnummer | PLZ   | Ort      |
 | --------- | ---------------- | ---------- | ----- | -------- |
@@ -27,9 +40,7 @@
 | 6         | Spandauer Straße | 5          | 33123 | Berlin   |
 | 7         | Baumstraße       | 106        | 52675 | Essen    |
 
----
-
-## Kunde
+### Kunde
 
 | Person-Id |
 | --------- |
@@ -39,9 +50,8 @@
 | K005      |
 | K007      |
 
----
 
-## Mitarbeiter
+### Mitarbeiter
 
 | Person-Id | Sachgebiet         |
 | --------- | ------------------ |
@@ -51,9 +61,8 @@
 | M006      | Afrikareisen       |
 | M008      | Nordamerika Reisen |
 
----
 
-## buchen
+### buchen
 
 | Reise-Id | Buchungsstatus | Person-Id |
 | -------- | -------------- | --------- |
@@ -64,9 +73,8 @@
 | 446      | storniert      | K005      |
 | 447      | laeuft         | K007      |
 
----
 
-## Reise
+### Reise
 
 | Reise-Id | Teilnehmerzahl | Buchungsdatum              | Versicherung | Gesamtpreis | Person-Id |
 | -------- | -------------- | -------------------------- | ------------ | ----------- | --------- |
@@ -75,9 +83,8 @@
 | 446      | 2              | 2025-02-12 17:55:09:804981 | true         | 745.89      | K005      |
 | 447      | 2              | 2025-02-12 17:55:09:804981 | true         | 459.50      | K007      |
 
----
 
-## Land
+### Land
 
 | Land-Id | Staat                   | Sprache          | Waehrung             | Preisklasse |
 | ------- | ----------------------- | ---------------- | -------------------- | ----------- |
@@ -90,9 +97,8 @@
 | TR      | Tuerkei                 | tuerkisch        | Lira                 | 1           |
 | VN      | Vietnam                 | vietnamesisch    | Vietnamesischer Dong | 1           |
 
----
 
-## Etappe
+### Etappe
 
 | Etappen-Id | Startdatum | Enddatum   | Reiseziel | Etappenkosten | Transfer | Land-Id | Unterkunfts-Id | Reise-Id |
 | ---------- | ---------- | ---------- | --------- | ------------- | -------- | ------- | -------------- | -------- |
@@ -105,9 +111,8 @@
 | 502        | 2025-06-09 | 2025-06-20 | Istanbul  | 445.89        | false    | TR      | 7              | 446      |
 | 601        | 2025-07-01 | 2025-07-12 | Hanoi     | 459.5         | true     | VN      | 8              | 447      |
 
----
 
-## Transport
+### Transport
 
 | Transport-Id | Transportmittel | Start      | Ende       | Dauer    | Zwischenstopp | Transportkosten | Etappen-Id |
 | ------------ | --------------- | ---------- | ---------- | -------- | ------------- | --------------- | ---------- |
@@ -116,3 +121,8 @@
 | 012          | Zug             | 2025-07-01 | 2025-07-01 | 07:50:00 | 2             | 120.50          | 401        |
 | 013          | Flugzeug        | 2025-06-09 | 2025-06-09 | 05:27:00 | 0             | 245.89          | 502        |
 | 014          | Zug             | 2025-07-01 | 2025-07-01 | 06:07:00 | 2             | 99.50           | 601        |
+
+## Benotung
+
+Für dieses Projekt wurde die Note 1,7 erreicht.
+
